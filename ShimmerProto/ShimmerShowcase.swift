@@ -357,9 +357,7 @@ struct ShimmerShowcase: View {
 }
 
 #if DEBUG
-struct ShimmerShowcase_Previews: PreviewProvider {
-    static var previews: some View {
-        ShimmerShowcase()
-    }
+#Preview {
+    ShimmerShowcase()
 }
 #endif
