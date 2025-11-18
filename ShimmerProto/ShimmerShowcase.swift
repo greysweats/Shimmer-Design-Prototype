@@ -78,14 +78,14 @@ struct ShimmerShowcase: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 30) {
-                    // Preview Section
-                    previewSection
-                        .id(parametersID) // Force refresh when parameters change
-                    
-                    Divider()
-                    
+            VStack(spacing: 30) {
+                // Preview Section
+                previewSection
+                    .id(parametersID) // Force refresh when parameters change
+                
+                Divider()
+                
+                ScrollView {
                     // Controls
                     VStack(spacing: 25) {
                         animationControls
@@ -96,8 +96,8 @@ struct ShimmerShowcase: View {
                     }
                     .padding(.horizontal)
                 }
-                .padding(.vertical)
             }
+            .padding(.vertical)
             .navigationTitle("Shimmer Showcase")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
